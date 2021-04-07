@@ -91,7 +91,11 @@ function deletedata(e) {
         type: "delete",
         dataType: 'text',
 
-
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Authorization": "Bearer "+token
+        },
         error: function (error) {
             alert(error);
 
@@ -110,6 +114,7 @@ function deletedata(e) {
         }
     });
 }
+
 
 function updatedata(e) {
 
